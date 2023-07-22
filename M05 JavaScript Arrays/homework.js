@@ -210,7 +210,17 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-}
+   var AumentandoDos =[];
+   for (var i=0; i<10; i++){
+     var num = num +2;
+     if(num !== i){
+       AumentandoDos.push(num);
+     }else{
+       return('Se interrumpió la ejecución');
+       break;
+     }
+   } return(AumentandoDos);
+ }
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -219,7 +229,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
-}
+   var AumentandoDos =[];
+   for (var i=0; i<10; i++){
+      if(i !== 5){
+         var num = num +2;
+         AumentandoDos.push(num);
+      }else{
+         continue;
+      }
+   } return(AumentandoDos);
+ }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
