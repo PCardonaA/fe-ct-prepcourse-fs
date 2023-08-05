@@ -1,21 +1,22 @@
-function capicua(numero) {
-    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
-    // Caso contrario: "No es capicua".
+function deleteAbc(string) {
+    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
+    // Retorna el string sin estas letras.
     // Tu código:
-    var numeroEnArray = String(numero);
-    var capicua = 'Es capicua';
-    for (var i =0; i<= ((numeroEnArray.length/2)+1); i++){
-        if(numeroEnArray[i]!==numeroEnArray[numeroEnArray.length-(i+1)]){
-            capicua = 'No es capicua'
-            return(capicua);
-            break;
-        }else{
-          continue;
+    var arregloPalabra = string.split('');
+    var i = 0;
+    if(arregloPalabra.includes('a')||arregloPalabra.includes('b')|| arregloPalabra.includes('c')){
+       while(i < arregloPalabra.length){
+          if(arregloPalabra[i]==='a'||arregloPalabra[i]==='b'||arregloPalabra[i]==='c'){
+             arregloPalabra.splice(i,1);
+             i = i;
+          }else{
+            i=i+1;
+          }
        };
     };
-    return(capicua);
+    var palabraJunta = arregloPalabra.join('');
+    console.log(palabraJunta);
 }
-capicua(12321);
-capicua(1111);
-capicua(105217);
-capicua(7878700);
+
+deleteAbc('abchola');
+deleteAbc('balon');
